@@ -4,6 +4,7 @@
 
 #include "base/strings/string_util.h"
 
+#include "Altair.h"
 #include "Plotly.h"
 #include "Base.h"
 
@@ -14,7 +15,10 @@ kaleido::scopes::BaseScope* LoadScope(std::string name) {
     std::string name_lower = base::ToLowerASCII(name);
     if (name_lower == "plotly") {
         return new kaleido::scopes::PlotlyScope();
-    } else {
+    } else if (name_lower == "altair") {
+        return new kaleido::scopes::AltairScope();
+    }
+    else {
         return nullptr;
     }
 }
