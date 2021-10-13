@@ -54,9 +54,9 @@ namespace kaleido {
                     }
                 }
             } else {
+                scriptTags.emplace_back("https://cdn.jsdelivr.net/npm/vega@5");
                 scriptTags.emplace_back("https://cdn.jsdelivr.net/npm/vega-lite@5");
-            }
-
+                scriptTags.emplace_back("https://cdn.jsdelivr.net/npm/vega-embed@6");
         }
 
         AltairScope::~AltairScope() {}

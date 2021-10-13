@@ -1,5 +1,6 @@
 module.exports = {
     name: 'kaleido_scopes',
     plotly: require('./plotly/render'),
-    // Additional plugins go here
+	altair: require('./altair/render'),
+	// Additional plugins go here
 }
